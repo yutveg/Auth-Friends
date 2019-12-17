@@ -32,6 +32,12 @@ const Friends = () => {
       .post("friends", friendValues)
       .then(res => console.log(res))
       .catch(err => console.log(err));
+    setFriendValues({
+      ...friendValues,
+      name: "",
+      age: "",
+      email: ""
+    });
   };
 
   return (
